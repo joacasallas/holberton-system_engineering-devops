@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ugo 457 hello
+chmod ugo 754 hello
