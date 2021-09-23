@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod o 100
+chmod o 744
