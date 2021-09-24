@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod ogu 754 hello
+chmod o+x g+x u+r hello
