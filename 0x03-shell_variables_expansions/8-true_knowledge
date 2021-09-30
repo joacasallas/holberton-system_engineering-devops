@@ -1,2 +1,2 @@
 #!/bin/bash
-export TRUEKNOWLEDGE=1209 | let suma=$128+$TRUEKNOWLEDGE | echo $suma
+echo $((128 + TRUEKNOWLEDGE))
