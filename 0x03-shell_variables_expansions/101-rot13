@@ -1,2 +1,2 @@
 #!/bin/bash
-tr "ABCDEFGHIJKLM" "NOPQRSTUVWXYZ" | print "\n"
+tr "ABCDEFGHIJKLM" "NOPQRSTUVWXYZ"
