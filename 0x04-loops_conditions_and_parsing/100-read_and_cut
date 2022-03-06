@@ -4,7 +4,13 @@
 #username
 #user id
 #Home directory path for the user
-for i in /etc/passwd 
+#input="/etc/passwd"
+#while IFS= read -r line
+#do
+#echo "$line" | cut -d":" -f 1,3,6 /etc/passwd 
+#done < "$input"
+input="/etc/passwd"
+while IFS= read -r line
 do
-echo | cut -d":" -f 1,3,6 /etc/passwd 
-done
+  echo "$line" | cut -d":" -f 1,3,6 
+done < "$input"
