@@ -1,21 +1,7 @@
 #!/usr/bin/env bash
 #Bash script that displays the content of the file /etc/passwd, using the while loop + IFS.
 input="/etc/passwd"
-while IFS= read -r line
+while IFS=: read -r f1 f2 f3 f4 f5 f6 f7
 do
-echo "The user" | tr "\n" " " 
-echo "$line" | cut -d":" -f1 | tr "\n" " "
-echo "is part of the" | tr "\n" " "
-echo "$line" | cut -d":" -f4 | tr "\n" " "
-echo "gang," | tr "\n" " "
-echo "lives in" | tr "\n" " "
-echo "$line" | cut -d":" -f6 | tr "\n" " "
-echo "and rides" | tr "\n" " "
-echo "$line" | cut -d":" -f7 | tr "\n" " "
-echo "." | tr "\n" " "
-echo "$line" | cut -d":" -f3 | tr "\n" " "
-echo "'s place is protected by the passcode" | tr "\n" " "
-echo "$line" | cut -d":" -f2 | tr "\n" " "
-echo " , more info about the user here:" | tr "\n" " "
-echo "$line" | cut -d":" -f1
+echo "The user $f1 is part of the $f4 gang, lives in $f6 and rides $f7. $f3's place is protected by the passcode $f2, more info about the user here: $f5"
 done < "$input"
