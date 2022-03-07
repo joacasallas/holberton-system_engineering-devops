@@ -16,6 +16,6 @@ echo "." | tr "\n" " "
 echo "$line" | cut -d":" -f3 | tr "\n" " "
 echo "'s place is protected by the passcode" | tr "\n" " "
 echo "$line" | cut -d":" -f2 | tr "\n" " "
-echo ", more info about the user here:" | tr "\n" " "
+echo " , more info about the user here:" | tr "\n" " "
 echo "$line" | cut -d":" -f1
 done < "$input"
