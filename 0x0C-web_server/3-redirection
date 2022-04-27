@@ -4,8 +4,5 @@ apt-get -y update
 apt-get -y install nginx
 ufw allow 'Nginx HTTP'
 echo 'Hello World!' > /var/www/html/index.nginx-debian.html
-service nginx start
-old = /var/www/html/index.nginx-debian.html
-new = http://www.ejemplo.es/redirect_me
-sudo sed -i old  redirect 301 old new
-sudo service nginx reload
+sudo sed -i /var/www/html/index.nginx-debian.html  redirect 301 /var/www/html/index.nginx-debian.html http://www.ejemplo.es/redirect_me
+sudo service nginx restart
