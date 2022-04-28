@@ -13,3 +13,8 @@ file_line { 'nginx':
 file { '/var/www/html/index.nginx-debian.html':
   content => 'Hello World!',
 }
+
+service { 'nginx':
+  ensure  => running,
+  require => Package['nginx'],
+}
