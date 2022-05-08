@@ -13,8 +13,8 @@ frontend http
 	default_backend web-server
 backend web-server
 	balance roundrobin
-	server 3774-web-01 34.75.79.52:80 check
-	server 3774-web-02 54.85.108.121:80 check
+	server 3361-web-01 104.196.210.42:80 check
+	server 3361-web-02 35.196.201.147:80 check
 "
 
 sudo echo "$configuration" >> /etc/haproxy/haproxy.cfg
