@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # script that accepts one argument & run the whoami command 
 # under the user passed as an argument
-whoami | awk '{print $1}'
+echo $Sudo_USER
+whoami
