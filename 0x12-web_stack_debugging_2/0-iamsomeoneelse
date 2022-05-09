@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # script that accepts one argument & run the whoami command 
 # under the user passed as an argument
-[ "$1" ] && user=$1 || echo "$user"
+su "$1" -s /bin/bash -c whoami
