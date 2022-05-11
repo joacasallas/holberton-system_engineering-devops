@@ -5,10 +5,11 @@ dig_function () {
     then
         for subdomain in "www" "lb-01" "web-01" "web-02"
         do
-            dig "$subdomain"."$1" | grep -A1 'ANSWER SECTION:'
+            echo "The subdomain $subdomain is a A record and points to" | tr '\n' ' '
+            dig "$subdomain"."$1" | grep -A1 'ANSWER SECTION:' | awk -F " " '{print $NF}' | grep -v 'SECTION:'
         done
     fi
     return 0
 }
 
-dig_function $1
+dig_function "$1"
