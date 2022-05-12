@@ -12,4 +12,4 @@ dig_function () {
     return 0
 }
 
-dig_function "$1"
+dig_function "$1" 
